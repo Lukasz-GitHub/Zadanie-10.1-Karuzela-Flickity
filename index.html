@@ -11,41 +11,53 @@
 </head>
 
 <body>
-    <div class="main-carousel">
-        <div class="carousel-cell" id="carousel-cell1" style="background-image: url(http://www.sunlandasphalt.com/wp-content/uploads/2015/05/Las-Vegas-vF-sm-1200x300.jpg)">
-            <div class="container"></div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell2" style="background-image: url(https://www.iso.org/files/live/sites/isoorg/files/archive/Ref2001/img_ref2001_01.jpg/thumbnails/1200x300)">
+    <div class="main-carousel"></div>
+
+    <script id="template-slide" type="x-tmpl-mustache">
+        <div class="carousel-cell" id="carousel-cell1" style="background-image: url({{ image }})">
             <div class="container">
-                <h2>Donghai Bridge</h2>
+                <h1>{{ title }}</h1>
+                {{{ description }}}
             </div>
         </div>
-        <div class="carousel-cell" id="carousel-cell3" style="background-image: url(https://wearesnook.com/content/uploads/2016/11/Somers-Town-Spark-Blog-image-Banner-1200x300-c-default.jpg)">
-            <div class="container"></div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell4" style="background-image: url(https://www.iso.org/files/live/sites/isoorg/files/standards/popular_standards/iso_50001_energy_management/img/future-electrical-production.jpg/thumbnails/1200x300)">
-            <div class="container">
-                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell5" style="background-image: url(https://cdn.pixabay.com/photo/2015/12/13/09/42/banner-1090835__340.jpg)">
-            <div class="container"></div>
-        </div>
-    </div>
+    </script>
+
     <div class="progress-bar"></div>
-    <div class="container">
-        <p>
-            View:
-            <a href="#carousel-cell1">Cell-1</a>
-            <a href="#carousel-cell2">Cell-2</a>
-            <a href="#carousel-cell3">Cell-3</a>
-            <a href="#carousel-cell4">Cell-4</a>
-            <a href="#carousel-cell5">Cell-5</a>
-        </p>
-    </div>
     <div class="button-reset">
         <button class="button">Return</button>
     </div>
+
+    <script>
+        var slideData = [{
+                image: "http://www.sunlandasphalt.com/wp-content/uploads/2015/05/Las-Vegas-vF-sm-1200x300.jpg",
+                title: "Slajd 1",
+                description: "",
+            },
+            {
+                image: "https://www.iso.org/files/live/sites/isoorg/files/archive/Ref2001/img_ref2001_01.jpg/thumbnails/1200x300",
+                title: "Slajd 2",
+                description: "",
+            },
+            {
+                image: "https://wearesnook.com/content/uploads/2016/11/Somers-Town-Spark-Blog-image-Banner-1200x300-c-default.jpg",
+                title: "Slajd 3",
+                description: "",
+            },
+            {
+                image: "https://www.iso.org/files/live/sites/isoorg/files/standards/popular_standards/iso_50001_energy_management/img/future-electrical-production.jpg/thumbnails/1200x300",
+                title: "Slajd 4",
+                description: "",
+            },
+            {
+                image: "https://cdn.pixabay.com/photo/2015/12/13/09/42/banner-1090835__340.jpg",
+                title: "Slajd 5",
+                description: "<p>Lorem ipsum.</p> <img src=http://via.placeholder.com/400x200> <p>Dolor sit.</p>"
+            }
+        ]
+
+    </script>
+
+    <script src="vendor/mustache.js"></script>
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="js/script.js"></script>
 </body>

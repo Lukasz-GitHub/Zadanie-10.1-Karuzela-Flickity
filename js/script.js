@@ -1,4 +1,16 @@
+var templateList = document.getElementById('template-slide').innerHTML;
 var elem = document.querySelector('.main-carousel');
+Mustache.parse(templateList);
+
+var generatedList = '';
+
+for (var i = 0; i < slideData.length; i++) {
+    console.log(slideData);
+    generatedList += Mustache.render(templateList, slideData[i]);
+}
+
+elem.insertAdjacentHTML('beforeend', generatedList);
+
 var flkty = new Flickity(elem, {
     cellAlign: 'left',
     contain: true,
