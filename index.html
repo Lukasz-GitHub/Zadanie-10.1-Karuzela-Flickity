@@ -12,6 +12,13 @@
 
 <body>
     <div class="main-carousel"></div>
+    <div class="progress-bar"></div>
+    <div class="button-reset">
+        <button class="button">Return</button>
+    </div>
+
+    <div id="map"></div>
+
 
     <script id="template-slide" type="x-tmpl-mustache">
         <div id="{{ id }}" class="carousel-cell" style="background-image: url({{ image }})">
@@ -22,43 +29,56 @@
         </div>
     </script>
 
-    <div class="progress-bar"></div>
-    <div class="button-reset">
-        <button class="button">Return</button>
-    </div>
-
     <script>
-        var slideData = [
-            {
+        var slideData = [{
                 image: "http://www.sunlandasphalt.com/wp-content/uploads/2015/05/Las-Vegas-vF-sm-1200x300.jpg",
                 title: "Slajd 1",
                 description: "",
-                id: "carousel-cell1"
+                id: "carousel-cell1",
+                coords: {
+                    lat: 50.06465009999999,
+                    lng: 19.94497990000002
+                }
             },
             {
                 image: "https://www.iso.org/files/live/sites/isoorg/files/archive/Ref2001/img_ref2001_01.jpg/thumbnails/1200x300",
                 title: "Slajd 2",
                 description: "",
-                id: "carousel-cell2"
-                
+                id: "carousel-cell2",
+                coords: {
+                    lat: 35.6894875,
+                    lng: 139.69170639999993
+                }
             },
             {
                 image: "https://wearesnook.com/content/uploads/2016/11/Somers-Town-Spark-Blog-image-Banner-1200x300-c-default.jpg",
                 title: "Slajd 3",
                 description: "",
-                id: "carousel-cell3"
+                id: "carousel-cell3",
+                coords: {
+                    lat: 49.14155100000001,
+                    lng: 2.284601000000066
+                }
             },
             {
                 image: "https://www.iso.org/files/live/sites/isoorg/files/standards/popular_standards/iso_50001_energy_management/img/future-electrical-production.jpg/thumbnails/1200x300",
                 title: "Slajd 4",
                 description: "",
-                id: "carousel-cell4"
+                id: "carousel-cell4",
+                coords: {
+                    lat: 50.3569429,
+                    lng: 7.588995899999986
+                }
             },
             {
                 image: "https://cdn.pixabay.com/photo/2015/12/13/09/42/banner-1090835__340.jpg",
                 title: "Slajd 5",
                 description: "<p>Lorem ipsum.</p> <img src=http://via.placeholder.com/400x200> <p>Dolor sit.</p>",
-                id: "carousel-cell5"
+                id: "carousel-cell5",
+                coords: {
+                    lat: 54.2489618,
+                    lng: 15.956030400000031
+                }
             }
         ]
 
@@ -67,6 +87,7 @@
     <script src="vendor/mustache.js"></script>
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOgj8aYre7qR9V_Wor5_d9dYhq-5GuA28&callback=initMap"></script>
 </body>
 
 </html>

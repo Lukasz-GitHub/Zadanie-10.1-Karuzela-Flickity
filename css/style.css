@@ -1,11 +1,41 @@
-.button { position: absolute; top: 0; right: 0; }
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
-.carousel-cell { width: 100%; min-height: 250px; height: 50vh; margin-right: 10px; background-size: cover; }
+.carousel-cell {
+  width: 100%;
+  min-height: 250px;
+  height: 50vh;
+  margin-right: 10px;
+  background-size: cover;
+}
 
-.container { width: 1000px; margin: 0 auto; text-align: center; }
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-.container p { color: #000; font-size: 1.8em; }
+.container p {
+  color: #000;
+  font-size: 1.8em;
+}
 
-.container a { font-size: 1em; text-decoration: none; }
+.container a {
+  font-size: 1em;
+  text-decoration: none;
+}
 
-.progress-bar { height: 20px; width: 0; background: #333; }
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+}
+
+#map {
+  width: 100%;
+  height: 50vh;
+}
+/*# sourceMappingURL=style.css.map */
