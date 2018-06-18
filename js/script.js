@@ -6,7 +6,6 @@ Mustache.parse(templateList);
 var generatedList = '';
 
 for (var i = 0; i < slideData.length; i++) {
-    console.log(slideData)
     generatedList += Mustache.render(templateList, slideData[i]);
 }
 
@@ -17,7 +16,7 @@ var flkty = new Flickity(elem, {
     contain: true,
     pageDots: false
 });
-// Przycisk powrotu do pierwszego slajcu
+// Przycisk powrotu do pierwszego slajdu
 var buttonReset = document.querySelector('.button-reset');
 var button = buttonReset.querySelector('.button');
 button = fizzyUIUtils.makeArray(button);
@@ -46,6 +45,9 @@ window.initMap = function () {
         var marker = new google.maps.Marker({
             position: slideData[i].coords,
             map: map
+        });
+        marker.addListener('click', function(){
+            flkty.select(index);
         });
     }
 }
